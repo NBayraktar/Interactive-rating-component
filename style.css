@@ -1,0 +1,106 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  background: hsl(216, 12%, 8%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*** Typography ***/
+h1 {
+  color: hsl(0, 0%, 100%);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+p,
+.rate-num {
+  color: hsl(217, 12%, 63%);
+}
+
+/*** Layout ***/
+.container {
+  width: 80%;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 1.8em;
+  background: hsl(213, 19%, 10%);
+  border-radius: 15px;
+}
+
+.img-wraper,
+.rate-num {
+  width: 50px;
+  height: 50px;
+  background: hsl(213, 19%, 15%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rate-num {
+  font-weight: 700;
+}
+
+.rate-num:hover {
+  background-color: hsl(213, 19%, 19%);
+  cursor: pointer;
+}
+
+.rate {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+
+/*** Button ***/
+.submit {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 1em 0;
+  color: hsl(0, 0%, 100%);
+  background: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 30px;
+}
+
+.submit:hover,
+.submit:focus {
+  background: hsl(25, 97%, 63%);
+  cursor: pointer;
+}
+
+/*** Footer ***/
+.attribution {
+  width: 99%;
+  margin: 0 auto;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  position: fixed;
+  bottom: 1em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*** Media Queries ***/
+@media (min-width: 375px) {
+  .container {
+    max-width: 440px;
+  }
+}
