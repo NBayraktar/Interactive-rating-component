@@ -58,7 +58,12 @@ p,
   cursor: pointer;
 }
 
-.rate {
+.orange {
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+
+.rate-wraper {
   display: flex;
   justify-content: space-between;
   margin: 2em 0;
