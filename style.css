@@ -21,10 +21,6 @@ h1 {
 p {
   font-size: 1.2rem;
   line-height: 1.5;
-}
-
-p,
-.rate-num {
   color: hsl(217, 12%, 63%);
 }
 
@@ -38,8 +34,7 @@ p,
   border-radius: 15px;
 }
 
-.img-wraper,
-.rate-num {
+.img-wraper {
   width: 50px;
   height: 50px;
   background: hsl(213, 19%, 15%);
@@ -49,34 +44,52 @@ p,
   align-items: center;
 }
 
-.rate-num {
-  font-weight: 700;
+/*** Radio buttons ***/
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
 }
 
-.rate-num:hover {
-  background-color: hsl(213, 19%, 19%);
+.label {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-top: 15px;
+  border-radius: 50%;
+  background: hsl(213, 19%, 15%);
+  color: hsl(217, 12%, 63%);
+  transition: all 0.3s;
+}
+
+.label:hover {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
 
-.orange {
-  background: hsl(25, 97%, 53%);
-  color: hsl(0, 0%, 100%);
+.input[type='radio'] {
+  display: none;
 }
 
-.rate-wraper {
-  display: flex;
-  justify-content: space-between;
-  margin: 2em 0;
+.input[type='radio']:checked + label {
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
 }
 
 /*** Button ***/
 .submit {
   width: 100%;
   text-transform: uppercase;
+  transition: all 0.3s;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
   padding: 1em 0;
+  margin-top: 1.8em;
   color: hsl(0, 0%, 100%);
   background: hsl(25, 97%, 53%);
   border: none;
@@ -85,7 +98,9 @@ p,
 
 .submit:hover,
 .submit:focus {
-  background: hsl(25, 97%, 63%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 63%);
+  outline: none;
   cursor: pointer;
 }
 
