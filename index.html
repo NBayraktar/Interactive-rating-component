@@ -50,7 +50,9 @@
               name="rating"
               value="One"
             />
-            <label for="one" class="label">1</label>
+            <label for="one" class="label label-one" data-rate-one="one"
+              >1</label
+            >
 
             <input
               type="radio"
@@ -59,7 +61,9 @@
               name="rating"
               value="Two"
             />
-            <label for="two" class="label">2</label>
+            <label for="two" class="label label-two" data-rate-two="two"
+              >2</label
+            >
 
             <input
               type="radio"
@@ -68,7 +72,9 @@
               name="rating"
               value="Three"
             />
-            <label for="three" class="label">3</label>
+            <label for="three" class="label label-three" data-rate-three="three"
+              >3</label
+            >
 
             <input
               type="radio"
@@ -77,7 +83,9 @@
               name="rating"
               value="Four"
             />
-            <label for="four" class="label">4</label>
+            <label for="four" class="label label-four" data-rate-four="four"
+              >4</label
+            >
 
             <input
               type="radio"
@@ -86,11 +94,28 @@
               name="rating"
               value="Five"
             />
-            <label for="five" class="label">5</label>
+            <label for="five" class="label label-five" data-rate-five="five"
+              >5</label
+            >
           </fieldset>
           <input type="submit" value="SUBMIT" class="submit" />
         </form>
       </main>
+    </div>
+
+    <!-- Thank you state start -->
+    <div class="modal">
+      <img
+        src="images/illustration-thank-you.svg"
+        class="pop-up-img"
+        alt="Image of credit card peyment mashine"
+      />
+      <p class="rating-state">You selected 3 out of 5</p>
+      <h1 class="rating-header">Thank you!</h1>
+      <p class="rating-text">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
     </div>
 
     <footer class="attribution">
@@ -99,17 +124,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Nazim Bayraktar</a>.
     </footer>
-
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    <!-- You selected -->
-    <!-- Add rating here -->
-    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch! -->
-
-    <!-- Thank you state end -->
 
     <!-- Link to script tag -->
     <script src="script.js"></script>

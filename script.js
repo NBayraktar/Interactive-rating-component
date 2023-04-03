@@ -1,19 +1,24 @@
+let value = '';
 document.addEventListener('click', (e) => {
-  if (e.target.dataset.one) {
-    changeColor(0)
-  } else if (e.target.dataset.two) {
-    changeColor(1)
-  } else if (e.target.dataset.three) {
-    changeColor(2)
-  } else if (e.target.dataset.four) {
-    changeColor(3)
-  } else if (e.target.dataset.five) {
-    changeColor(4)
+
+  if (e.target.dataset.rateOne) {
+    value = document.querySelector('.label-one').innerHTML;
+  } else if (e.target.dataset.rateTwo) {
+    value = document.querySelector('.label-two').innerHTML;
+  } else if (e.target.dataset.rateThree) {
+    value = document.querySelector('.label-three').innerHTML;
+  } else if (e.target.dataset.rateFour) {
+    value = document.querySelector('.label-four').innerHTML;
+  } else if (e.target.dataset.rateFive) {
+    value = document.querySelector('.label-five').innerHTML;
   }
+
+  document.addEventListener('submit', display);
 })
 
-function changeColor(i) {
-  if (document.querySelectorAll('.orange')) {
-    document.querySelectorAll('.rate-num')[i].classList.add('orange')
-  }
+function display(e) {
+  document.querySelector('.rating-state').innerHTML = `You selected ${value} out of 5`;
+  document.querySelector('.container').style.display = 'none';
+  document.querySelector('.modal').style.display = 'block';
+  e.preventDefault()
 }
