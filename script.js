@@ -17,8 +17,12 @@ document.addEventListener('click', (e) => {
 })
 
 function display(e) {
-  document.querySelector('.rating-state').innerHTML = `You selected ${value} out of 5`;
-  document.querySelector('.container').style.display = 'none';
-  document.querySelector('.modal').style.display = 'block';
-  e.preventDefault()
+  if (value !== '') {
+    document.querySelector('.rating-state').innerHTML = `You selected ${value} out of 5`;
+    document.querySelector('.container').style.display = 'none';
+    document.querySelector('.modal').style.display = 'block';
+    e.preventDefault()
+  } else {
+    alert('Please choose rate 1 to 5!');
+  }
 }
